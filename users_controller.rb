@@ -5,7 +5,7 @@ class UsersController < ApplicationController
     end
     #rendor returns the data in json format?
     def show
-        @user = User.find(params[:username])
+        @user = User.find(params[:id])
         render json: @user
     end
     
@@ -18,9 +18,12 @@ class UsersController < ApplicationController
             end
     end
 
+    def 
+
+
 
     #users params method to find the username out of user?
     def user_params
-        params.require(:user).permit(:username)
+        params.require(:user).permit(:name, :email)
     end
 end
